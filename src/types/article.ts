@@ -7,6 +7,27 @@ import { Image } from "./image";
 import { BaseFilters, Sponsorship, TaxonomyTag, UrlBucket } from "./common";
 
 /**
+ * Article review data (for PRP - Product Review Pages)
+ * Derived from rwy-article-review-schema.php and review.ts
+ */
+export interface ArticleReview {
+  /** Card PID if this is a card review */
+  cardPid: number | null;
+
+  /** Hotel ID if this is a hotel review */
+  hotelId: number | null;
+
+  /** Review rating (e.g., TPG rating) */
+  rating: number | null;
+
+  /** Whether to show card tile on PRP */
+  showCardOnPRP: boolean;
+
+  /** Review type: 'card' | 'hotel' | null */
+  type: string | null;
+}
+
+/**
  * Full Article entity
  * Matches Article.php constructor exactly
  */
@@ -151,6 +172,9 @@ export interface Article {
 
   /** Related stories slugs */
   relatedStoriesSlugs: string[];
+
+  /** Review data for PRP (Product Review Pages) */
+  review: ArticleReview | null;
 }
 
 /**

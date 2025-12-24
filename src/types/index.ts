@@ -33,6 +33,7 @@ export type {
 export type {
   Article,
   ArticleAuthor,
+  ArticleReview,
   ArticleTile,
   ArticleOptions,
   ArticleFilters,
