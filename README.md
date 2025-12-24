@@ -1,4 +1,4 @@
-# @tpg/cms-interface
+# @tpg-cms-interface
 
 CMS Interface abstraction layer using **Hexagonal Architecture (Ports & Adapters)** pattern.
 
